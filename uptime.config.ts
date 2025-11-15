@@ -7,12 +7,12 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 const pageConfig: PageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "QingFeng Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://github.com/qwq2022', label: 'GitHub' },
+    { link: 'https://wp.qwq2022.top/', label: 'Blog' },
+    { link: 'mailto:qwq2022@outlook.com', label: 'Email Me', highlight: true },
   ],
 }
 
@@ -22,17 +22,17 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
+      id: 'blog',
       // `name` is used at status page and callback message
-      name: 'My API Monitor',
+      name: 'Blog',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://example.com',
+      target: 'https://wp.qwq2022.top',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      tooltip: '只是一个单纯的博客',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://wp.qwq2022.top',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
@@ -62,9 +62,9 @@ const workerConfig: WorkerConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      target: '45.192.104.57:22',
+      tooltip: '服务器ssh',
+      statusPageLink: 'https://wp.qwq2022.top',
       timeout: 5000,
     },
   ],
@@ -74,7 +74,7 @@ const workerConfig: WorkerConfig = {
     // More info at Wiki: https://github.com/lyc8503/UptimeFlare/wiki/Setup-notification
     webhook: {
       // [Required] webhook URL (example: Telegram Bot API)
-      url: 'https://api.telegram.org/bot123456:ABCDEF/sendMessage',
+      url: 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=56e9978d-ba9e-4be3-915b-31cb8e7808fb',
       // [Optional] HTTP method, default to 'GET' for payloadType=param, 'POST' otherwise
       // method: 'POST',
       // [Optional] headers to be sent
